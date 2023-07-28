@@ -12,7 +12,6 @@ async function main() {
     const WETH = await ethers.getContractFactory("WETH");
     const weth = WETH.attach(wrapeth);
 
-
     const Router = await ethers.getContractFactory("UniswapV2Router02", owner);
     const router = await Router.deploy(core, weth.address);
     await router.deployed();
