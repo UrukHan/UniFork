@@ -1,18 +1,25 @@
 # UniFork
 
-Форк Uniswap v2
+fork of Uniswap v2
 
-![plot](Logo.jpg)
+![plot](Logo.png)
 
-Деплой:
-```shell
-GOELI
-    Ядро UNISWAP unicore        0x8B68e9DAa7d5Fb1993812321c51c9549A60db1A2
-    Роутер UNISWAP unirout      0xcd52eD02f4a17a995b836bff7979c06cDF8b673A
-
-RINKEBY:
-    Ядро UNISWAP unicore        0xCE494E87f75FA7F3516500A820bad85De8eA9d08
-    Роутер UNISWAP unirout      0xc23E2DD7CC17e232414436520C7cDB7b4aB5c15E
+-------
+Delpoy DEX:
 ```
-
-
+1) Expand DEX Core   
+    (contract UniswapV2Factory in "CORE" folder)
+2) Get "INIT CODE PAIR HASH"
+    (by calling the function get_pair_hash() of the already deployed contract)
+3) In the pairFor() function of the UniswapV2Library.sol contract, replace hash
+    (to the previously received "INIT CODE PAIR HASH")
+4) Expand DEX Router   
+    (contract UniswapV2Router02 in"ROUTER" folder)
+```
+-----------
+Delpoy GRAPH:
+```
+1) Expand graph node
+2) Configure parameters for contracts monitored
+3) Expand subgraphs
+```
