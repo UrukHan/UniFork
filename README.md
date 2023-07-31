@@ -22,4 +22,9 @@ Delpoy GRAPH:
 1) Expand graph node
 2) Configure parameters for contracts monitored
 3) Expand subgraphs
+    npx graph create <username>/<subgraph-name> --node <graph-node>
+    npx graph deploy <username>/<subgraph-name> \
+        --ipfs <ipfs-url> \
+        --node <graph-node> \
+        --access-token <access-token>
 ```
