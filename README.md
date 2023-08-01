@@ -22,9 +22,13 @@ Delpoy GRAPH:
 1) Expand graph node
 2) Configure parameters for contracts monitored
 3) Expand subgraphs
-    npx graph create <username>/<subgraph-name> --node <graph-node>
-    npx graph deploy <username>/<subgraph-name> \
-        --ipfs <ipfs-url> \
-        --node <graph-node> \
-        --access-token <access-token>
+    graph init
+    graph codegen 
+    graph build
+    graph create --node http://127.0.0.1:8020/ UniFork
+    graph deploy 
+        --product hosted-service \
+        --version-label v0.0.1 \
+        --node http://127.0.0.1:8020/UniFork \
+        --ipfs http://127.0.0.1:5001 UniFork
 ```
