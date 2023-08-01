@@ -22,7 +22,6 @@ Delpoy GRAPH:
 1) Expand graph node
 2) Configure parameters for contracts monitored
 3) Expand subgraphs
-    graph init
     graph codegen 
     graph build
     graph create --node http://127.0.0.1:8020/ UniFork
